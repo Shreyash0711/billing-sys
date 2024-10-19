@@ -2,8 +2,8 @@ from twilio.rest import Client
 import tkinter as tk
 
 # Twilio credentials
-account_sid = 'ACd5e54869259e557165150dc6c8587c23'
-auth_token = '5e0d7db04f648f8473384979e87759a5'
+account_sid = 'Enter ur own'
+auth_token = 'Enter ur own'
 twilio_whatsapp_number = 'whatsapp:+your_twilio_number'  # Replace with your Twilio WhatsApp number
 
 # Function to send WhatsApp message
