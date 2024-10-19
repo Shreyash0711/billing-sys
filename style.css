@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:#bcb8b1;
+}
+
+.app-header {
+    background-color: #463f3a;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+}
+
+.add-customer, .view-customers, .add-product, .view-products, .add-billing, .view-billing, .report{
+    padding-left: 20px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-right: 20px;
+}
+
+#search-bar {
+    padding: 8px;
+    width: 200px;
+}
+
+.icons {
+    display: flex;
+    gap: 20px;
+}
+
+.dashboard, .customer-management, .inventory-management, .billing-system {
+    padding: 0px;
+}
+
+h2, h3 {
+    color: #333;
+}
+
+input[type="text"], input[type="number"], input[type="email"], select {
+    padding: 8px;
+    margin: 5px;
+    width: 200px;
+}
+
+.main-heading{
+    height: 50px;
+    background-color: #463f3a;
+    color: whitesmoke;
+    align-content: center;
+    text-align: center;
+}
+
+button {
+    padding: 8px 15px;
+    background-color: #223c42;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.page-foot{
+    height: 70px;
+    background-color: #463f3a;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 120%;
+    color: white;
+    text-align: center;
+    align-content: center;
+}
+
+table {
+    width: 100%;
+    margin-top: 10px;
+    padding: 20px;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #000;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}

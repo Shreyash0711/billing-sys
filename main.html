@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing Software</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- App Header -->
+    <header class="app-header">
+        <input type="text" id="search-bar" placeholder="Search...">
+        <div class="icons">
+            <span id="notification-bell">&#128276;</span>
+            <span id="profile-section">Profile</span>
+        </div>
+    </header>
+
+    <!-- Dashboard -->
+    <section class="dashboard">
+        <div class="report">
+            <h2>Total Sales: <span id="total-sales">$0</span></h2>
+            <h2>Total Revenue: <span id="total-revenue">$0</span></h2>
+        </div>
+    </section>
+
+    <!-- Customer Management -->
+    <section class="customer-management">
+        <h2 class="main-heading">Customer Management</h2>
+        <div class="add-customer">
+            <h3>Add Customer</h3>
+            <form id="customer-form">
+                <input type="text" id="customer-name" placeholder="Name" required>
+                <input type="radio" id="female" name="gender" value="Female"> Female
+                <input type="radio" id="male" name="gender" value="Male"> Male
+                
+                <!-- <input type="text" id="customer-contact" placeholder="Contact" pattern="\d{10}" maxlength="10" minlength="10" inputmode="numeric" oninput="this.value = this.value.replace(/\D/g, '').slice(0, 10);" required> -->
+                <input type="text" id="customer-contact" placeholder="Contact" pattern="\d{10}" maxlength="10" minlength="10" required>
+                <input type="email" id="customer-email" placeholder="Email" required>
+                <button type="button" onclick="saveCustomer()",onclick="validateContact()">Save</button>
+                <button type="reset">Clear</button>
+            </form>
+        </div>
+
+        <div class="view-customers">
+            <h3>Customer List</h3>
+            <table id="customer-list">
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Contact</th>
+                    <th>Email</th>
+                </tr>
+                <!-- Customer entries will appear here -->
+            </table>
+        </div>
+    </section>
+
+    <!-- Inventory Management -->
+    <section class="inventory-management">
+        <h2 class="main-heading">Inventory Management</h2>
+        <div class="add-product">
+            <h3>Add Product</h3>
+            <input type="text" id="product-name" placeholder="Product Name">
+            <input type="number" id="product-price" placeholder="Product Price">
+            <input type="number" id="product-quantity" placeholder="Product Quantity">
+            <input type="text" id="product-brand" placeholder="Product Brand">
+            <input type="text" id="product-supplier" placeholder="Product Supplier">
+            <input type="number" id="old-stock" placeholder="Old Stock">
+            <input type="text" id="product-category" placeholder="Product Category">
+            <button onclick="saveProduct()" onclick="">Save</button>
+        </div>
+
+        <div class="view-products">
+            <h3>Product List</h3>
+            <table id="product-list">
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Brand</th>
+                    <th>Actions</th>
+                </tr>
+                <!-- Product entries will appear here -->
+            </table>
+        </div>
+    </section>
+
+    <!-- Billing System -->
+    <section class="billing-system">
+        <h2 class="main-heading">Billing System</h2>
+        <div class="add-billing">
+            <h3>Add Billing</h3>
+            <select id="billing-customer">
+                <!-- Customer options will appear here -->
+            </select>
+            <select id="billing-product">
+                <!-- Product options will appear here -->
+            </select>
+            <button onclick="addBilling()">Add Billing</button>
+        </div>
+
+        <div class="view-billing">
+            <h3>Billing Details</h3>
+            <table id="billing-list">
+                <tr>
+                    <th>Customer</th>
+                    <th>Product</th>
+                    <th>Total</th>
+                    <th>Actions</th>
+                </tr>
+                <!-- Billing entries will appear here -->
+            </table>
+        </div>
+    </section>
+
+    <footer class="page-foot">
+        This Billing System can be used for Various Stores
+    </footer>
+
+    <script src="app1.js"></script>
+</body>
+</html>
